@@ -77,17 +77,15 @@
             </p>
             <p style="font-weight:bold;">
               {{if .IsLogin}}
-                Now Login (<a href="/login?flag=logout">Logout</a>)
+                {{.UserName}} (<a href="/login?flag=logout">Logout</a>)
               {{else}}
                 Not login
+                <ul>
+                <li><a href="/login/{{.NameLower}}">{{.Name}}</a></li>
+            </ul>
               {{end}}
             </p>
             <p style="font-weight:bold;color:red;">{{.Msg}}</p>
-            <ul>
-              {{range .Types}}
-                <li><a href="/login/{{.NameLower}}">{{.Name}}</a>{{if index $ .NameLower}}<br>{{index $ .NameLower}}{{end}}</li>
-              {{end}}
-            </ul>
           </div>
         </div>
       </div>
