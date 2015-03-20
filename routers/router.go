@@ -7,6 +7,6 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.MainController{})
-	beego.Router("/login/weixin", &controllers.MainController{}, "*:Login")
-	beego.Router("/login/oauth", &controllers.MainController{}, "*:Oauth")
+	beego.Router("/login/github", &controllers.MainController{}, "*:Login")
+	beego.Router("/login/github/access", &controllers.MainController{}, "*:Oauth")
 }

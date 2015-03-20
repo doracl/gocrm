@@ -16,6 +16,7 @@ type Weibo struct {
 	AuthURL     string
 	TokenURL    string
 	UserInfoURL string
+	BaseURL     string
 	//RedirectURL string
 }
 
@@ -32,6 +33,7 @@ func NewWeibo() *Weibo {
 		redirect_uri=%s`, appId, baseUrl+"/login/weibo/access")
 
 	w.TokenURL = "https://api.weibo.com/oauth2/access_token"
+	w.BaseURL = baseUrl
 	return w
 	//w.UserInfoURL = "https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=%s&code=CODE&agentid=" + appId
 }
@@ -41,7 +43,7 @@ func (w *Weibo) GetToken(code string) (string, error) {
 		"client_secret": {w.AppSecret},
 		"grant_type":    {"authorization_code"},
 		"code":          {code},
-		"redirect_uri":  {baseUrl + "/login/weibo/access"},
+		"redirect_uri":  {w.BaseURL + "/login/weibo/access"},
 	}
 	resp, err := http.PostForm(w.TokenURL, data)
 	if err != nil {
