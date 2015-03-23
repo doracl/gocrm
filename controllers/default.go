@@ -26,12 +26,16 @@ func (c *MainController) Get() {
 	user := c.Ctx.Input.CruSession.Get("user")
 	if user != nil {
 		islogin = true
+		c.TplNames = "index.tpl"
+		c.Data["UserName"] = user
+
+		return
 	}
 	c.Data["IsLogin"] = islogin
 	c.Data["UserName"] = user
 	c.Data["Name"] = "github"
 	c.Data["NameLower"] = "github"
-	c.TplNames = "index.tpl"
+	c.TplNames = "login.tpl"
 }
 
 func (this *MainController) Login() {
@@ -56,4 +60,12 @@ func (c *MainController) Oauth() {
 	c.Data["IsLogin"] = true
 	c.Data["UserName"] = user
 	c.TplNames = "index.tpl"
+
+	c.Ctx.Output.Header("Location", github.BaseURL)
+	c.Ctx.ResponseWriter.WriteHeader(302)
+}
+
+func (this *MainController) Logout() {
+	this.Ctx.Input.CruSession.Delete("user")
+	this.Redirect("/", 302)
 }
