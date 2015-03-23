@@ -45,8 +45,9 @@ func (this *MainController) Login() {
 	this.Ctx.Output.Header("Location", url)
 	this.Ctx.ResponseWriter.WriteHeader(302)
 }
+
 func (c *MainController) Oauth() {
-	code := c.GetString("code", "wangcl")
+	code := c.GetString("code", "doracl")
 	github := core.App["authprovider"].(*auth.Github)
 
 	token := github.GetToken(code)

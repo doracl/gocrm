@@ -51,5 +51,11 @@
 
 <script src="static/js/jquery-1.11.2.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+ });
+</script>
 </body>
 </html>
