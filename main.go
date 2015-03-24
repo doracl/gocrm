@@ -16,6 +16,7 @@ func initialize() {
 	beego.SessionOn = true
 	beego.SessionProvider = "memory"
 
+	beego.SetStaticPath("/assets", "assets")
 	core.App = make(map[string]interface{})
 	core.App["authprovider"] = auth.NewGithub()
 }

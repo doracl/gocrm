@@ -1,0 +1,333 @@
+
+/*
+ *	/home/wcl/frappe-bench/apps/frappe/frappe/public/css/list.css
+ */
+.no-result {
+  padding: 15px;
+}
+.show_filters {
+  padding: 15px 15px 0px;
+  border-bottom: 1px solid #d1d8dd;
+}
+.set-filters {
+  padding-bottom: 4px;
+}
+.set-filters .btn {
+  margin-bottom: 10px;
+}
+.set-filters .btn-group {
+  margin-right: 10px;
+}
+.set-filters .btn-group .btn-default {
+  background-color: transparent;
+  border: 1px solid #d1d8dd;
+  color: #8d99a6;
+}
+.filter-box {
+  border-top: 1px solid #d1d8dd;
+  margin: 0px -15px;
+  padding: 10px 15px 3px;
+}
+.filter-box .remove-filter {
+  margin-top: 6px;
+  margin-left: 15px;
+}
+.filter-box .filter_field {
+  padding-right: 15px;
+  width: calc(64%);
+}
+.ui-autocomplete .filter-field-select {
+  cursor: pointer;
+}
+.ui-autocomplete .filter-field-select p {
+  margin: 5px;
+}
+@media (min-width: 768px) {
+  .filter-box .row > div[class*="col-sm-"] {
+    padding-right: 0px;
+  }
+  .filter_field {
+    width: 65% !important;
+  }
+}
+.list-row {
+  padding: 9px 15px;
+  border-bottom: 1px solid #d1d8dd;
+  cursor: pointer;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+}
+.list-row .h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.list-row-head {
+  background-color: #f7fafc;
+  border-bottom: 1px solid #d1d8dd !important;
+}
+.list-row:hover,
+.grid-row:hover {
+  background: #f7fafc;
+}
+.list-row:last-child {
+  border-bottom: 0px;
+}
+.list-row-head {
+  background-color: #f7fafc;
+  border-bottom: 1px solid #d1d8dd !important;
+}
+.list-row .h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.list-item-col {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 30px;
+  padding-top: 3px;
+}
+.list-paging-area {
+  padding: 10px 15px;
+  border-top: 1px solid #d1d8dd;
+}
+.list-value {
+  vertical-align: middle;
+}
+.progress {
+  height: 10px;
+}
+.doclist-row {
+  font-size: 12px;
+}
+.doclist-row .docstatus .octicon {
+  font-size: 12px;
+}
+.doclist-row .progress {
+  margin-top: 12px;
+}
+.filterable {
+  cursor: pointer;
+}
+.doclist-row .label {
+  margin-right: 8px;
+}
+.list-info-row {
+  float: left;
+  margin-top: 1px;
+}
+.list-row-right .modified {
+  margin-top: 3px;
+}
+.list-row-right .list-row-modified {
+  margin-right: 9px;
+  margin-top: 3px;
+}
+.list-row-right {
+  margin-top: -2px;
+  margin-bottom: -4px;
+}
+.list-row-right .indicator {
+  margin-left: 10px;
+  margin-right: -5px;
+}
+.side-panel {
+  border-bottom: 1px solid #d1d8dd;
+  margin: 0px -15px;
+  padding: 5px 15px;
+}
+.listview-main-section .icon-star {
+  cursor: pointer;
+}
+.list-row-head .icon-star {
+  vertical-align: middle;
+}
+.star-action.icon-star {
+  color: #ffdb4c;
+}
+.list-id {
+  font-weight: bold;
+}
+.list-col {
+  height: 20px;
+}
+.list-value {
+  vertical-align: middle;
+}
+
+
+/*
+ *	/home/wcl/frappe-bench/apps/frappe/frappe/public/css/tag-it.css
+ */
+div.tag-line {
+	background-color: transparent;
+}
+
+ul.tagit {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	border: 0px;
+}
+
+
+ul.tagit li {
+    display: block;
+    float: left;
+    margin: 2px 5px 2px 0;
+	background: none;
+	border: none;
+}
+ul.tagit li.tagit-choice {
+	font-size: 11px;
+    padding: .2em;
+	padding-right: 18px;
+	padding-left: 4px;
+    position: relative;
+	background: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 4px;
+	background-color: #F0F4F7;
+	cursor: pointer;
+}
+
+ul.tagit li.tagit-new {
+    padding: 0 4px 0 0;
+}
+
+ul.tagit li.tagit-choice a.tagit-label {
+    cursor: pointer;
+    text-decoration: none;
+}
+ul.tagit li.tagit-choice .tagit-close {
+    cursor: pointer;
+    position: absolute;
+    right: .1em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+/* used for some custom themes that don't need image icons */
+ul.tagit li.tagit-choice .tagit-close .text-icon {
+    display: none;
+}
+
+ul.tagit li.tagit-choice input {
+    display: block;
+    float: left;
+    margin: 2px 5px 2px 0;
+}
+ul.tagit input[type="text"] {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+
+	-moz-transition: none;
+	box-shadow: none;
+    border: none;
+	min-height: 0px;
+    margin: 1px 5px 1px 0;
+    padding: 0.2em;
+    width: inherit;
+	background: none;
+    background-color: transparent;
+    outline: none;
+	font-size: 11px;
+	color: #777;
+}
+
+/* in list */
+
+.list-tag ul.tagit li.tagit-choice .tagit-close {
+	margin-top: -8px;
+}
+
+.list-tag ul.tagit input[type="text"] {
+	font-size: 11px;
+	margin-top: -1px;
+}
+
+.tag-row {
+	padding-left: 55px;
+	margin-bottom: -2px;
+}
+
+
+/*
+ *	/home/wcl/frappe-bench/apps/frappe/frappe/public/css/calendar.css
+ */
+.fc-toolbar {
+  padding: 15px;
+  margin-bottom: 0px !important;
+}
+.fc-view-container {
+  margin-left: -1px;
+}
+th.fc-widget-header {
+  background-color: #f7fafc;
+  color: #8C99A5;
+}
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+  border-color: #d1d8dd !important;
+}
+.fc-unthemed .fc-today {
+  background-color: #FFFEF2 !important;
+}
+.fc-highlight {
+  background-color: #D9F6FF !important;
+}
+.fc-event {
+  border: 1px solid #E8DDFF;
+  /* default BORDER color */
+  background-color: #E8DDFF;
+}
+
+
+/*
+ *	/home/wcl/frappe-bench/apps/frappe/frappe/public/css/gantt.css
+ */
+.gantt,
+.gantt2 {
+  border: none !important;
+  border-radius: none !important;
+  margin: 0px auto !important;
+}
+.gantt *,
+.gantt2 * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.fn-gantt .leftPanel,
+.fn-gantt .leftPanel .row0,
+.fn-gantt .leftPanel .name,
+.fn-gantt .leftPanel .desc,
+.fn-gantt .dataPanel,
+.fn-gantt .day,
+.fn-gantt .date,
+.fn-gantt .rightPanel .month,
+.fn-gantt .rightPanel .year {
+  border-color: #d1d8dd !important;
+}
+.fn-gantt .navigate {
+  border: none !important;
+}
+.fn-gantt .leftPanel .name,
+.fn-gantt .leftPanel .desc,
+.fn-gantt .spacer,
+.fn-gantt .wd,
+.fn-gantt .rightPanel .month,
+.fn-gantt .rightPanel .year,
+.fn-gantt .bottom {
+  background-color: #f7fafc !important;
+}
+.fn-gantt .today {
+  background-color: #D9F6FF !important;
+}
+

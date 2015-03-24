@@ -70,3 +70,7 @@ func (this *MainController) Logout() {
 	this.Ctx.Input.CruSession.Delete("user")
 	this.Redirect("/", 302)
 }
+
+func (this *MainController) Direct() {
+	this.TplNames = this.Input().Get("tpl") + ".tpl"
+}
